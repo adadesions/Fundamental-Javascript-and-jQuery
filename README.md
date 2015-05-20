@@ -1,6 +1,6 @@
 # Fundamental-Javascript-and-jQuery
-This is all code you need in Fundamental class 
-Welcome AdaCode.io members this is all meterial that I will update immediately after we finish course.
+This is all code you need in Fundamental class <br>
+Welcome AdaCode.io members this is all meterial that I will update immediately after we finish course.<br>
 
 <h3>You can clone or download my code by...</h3>
 
@@ -10,5 +10,5 @@ or
 
 <b>click on "Download ZIP"</b>
 
-<b>Cheer!
+<b>Cheer!<br>
 Ada</b>
