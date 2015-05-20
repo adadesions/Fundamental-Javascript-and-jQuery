@@ -2,13 +2,13 @@
 This is all code you need in Fundamental class 
 Welcome AdaCode.io members this is all meterial that I will update immediately after we finish course.
 
-You clone or download my code by
+<h3>You can clone or download my code by...</h3>
 
-"git clone ...."
+<b>"git clone https://github.com/adadesions/Fundamental-Javascript-and-jQuery.git"</b>
 
 or
 
-click on "Download zip"
+<b>click on "Download ZIP"</b>
 
-Cheer!
-Ada
+<b>Cheer!
+Ada</b>
