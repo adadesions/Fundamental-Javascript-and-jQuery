@@ -1,0 +1,40 @@
+<!-- Function the very important thing in JavaScript -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function!</title>
+</head>
+<body>
+<script type="text/javascript">
+	var landscape = function(){
+		var 	result = "-->";
+		var flat = function(size){			
+			for(i = 0; i<size; i++){
+				result += "_";
+			}
+		};
+
+		var mountain = function(size){
+			result += "/";
+			for(i = 0; i<size; i++)
+				result += "'";
+			result += "\\";
+		};
+
+		k = 0;
+		while(k<5){
+			flat(3);
+			mountain(10);
+			flat(3);
+			k++;	
+		}
+		
+
+		return result;
+	};
+
+	document.write(landscape());	
+</script>
+</body>
+</html>

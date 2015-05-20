@@ -1,0 +1,54 @@
+<!--Condition Statement  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Condition statement</title>
+</head>
+<body>
+<script type="text/javascript">
+	var input = Number(prompt("What's the answer of 8+9 ?"));
+	var result = 17;
+	if(!isNaN(input)){
+		if(result == input){
+			alert("You answer is correct!!");
+			document.write("You answer is correct!!");
+		}
+		else{
+			alert("Try again!");
+			document.write("Try again!!");
+		}
+	}
+	else{
+		alert("Your input is not a number");
+	}
+
+	input = Number(prompt("How old are you?"));
+
+	if(input < 20){
+		alert("So young");
+	}
+	else if(input > 20 && input <30){
+		alert("Hello,Sir");
+	}
+	else if(input >= 30){
+		alert("Ummm you look great!");
+	}
+	else{
+		alert("Something wrong");
+	}
+
+	switch(prompt("What is you favorite iProduct?")){
+		case "iPhone":
+			document.write("Cool! iPhone");
+			break;
+		case "iPad":
+			document.write("Woww! you like iPad");
+			break;
+		default:
+			document.write("Ummm everyone like Apple");
+			break;
+	}
+</script>
+</body>
+</html>

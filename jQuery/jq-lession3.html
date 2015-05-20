@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selector special</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<table>
+	<th>ID</th>
+	<th>NAME</th>
+	<th>NUMBER</th>
+
+</table>
+<script type="text/javascript" src="script/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	//var section
+	var name = '';
+	var generateData = function(row){
+		var i = 0;
+		var html = '';
+		for(i = 0; i<row; i++)
+			html += "<tr><td>"+i+"</td>"+"<td>Ada-"+i+"XI</td>"+"<td>"+(i*945)+"</td></tr>";
+		return html;
+	};
+
+	$(document).ready(function(){
+		var row = prompt("Input row...");
+		$('table').append(generateData(row));
+
+		$('tr:odd').css({
+			'background-color':'red',
+			'color': '#FFF',
+		});
+		$('tr:even').css({
+			'background-color':'green',
+			'color': '#FFF',
+		});
+
+	});
+</script>
+</body>
+</html>

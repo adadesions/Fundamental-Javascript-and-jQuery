@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Writer App</title>
+	<style type="text/css">		
+		body{
+			margin: 0;
+			padding: 0;
+			background-color: #FFF;
+		}
+		input{
+			width: 440px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border: none;
+			border-bottom: 1px solid #AAA;
+		}
+		textarea{
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.formAlign{
+			float: left;
+			margin-left: 30px;
+		}
+		.preview{
+			float: left;
+			margin-left: 100px;
+			border-left: 2px solid #999;			
+			padding-left: 50px; 
+			height: 550px;
+			width: 460px;
+		}
+		.preview-style{
+			border: none;
+			border-bottom: 1px solid #AAA;
+			width: 440px;
+
+		}
+		.nav{
+			width: auto;
+			height: 30px;
+			background-color: #000;
+			margin-bottom: 20px;
+			color: #FFF;
+			font-size: 30px;
+			padding-bottom: 10px;
+			padding-left: 30px;
+		}
+
+	</style>
+</head>
+<body>
+<div class="nav">AdaCode : Writer App</div>
+	<div class="formAlign">
+		<form method="GET">
+		<label>Article name</label><br>
+		<input type="text" name="article_name">	<br>
+		<label>Writer</label><br>
+		<input type="text" name="writer">
+		<br><br>
+		<label>Contents</label>		
+		<br>
+		<textarea rows="30" cols="70" name="content"></textarea><br>		
+		<button id="submit_btn">Submit Article</button>
+	 	</form>
+	</div>
+
+	<div class="preview">
+		<label>Article name</label><br>
+		<p id="article_name" class="preview-style"></p>
+		<label>Writer</label><br>
+		<p id="writer" class="preview-style"></p><br>
+		<label>Contents, Count: </label><span id="count">0</span>
+		<p id="content">Preview article content will be here...</p>
+	</div>
+	
+<script type="text/javascript" src="script/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">	
+
+	$(document).ready(function(){
+		var typeReal = function(source, destination){
+			source.keyup(function(){
+				destination.html(source.val());
+			});
+		};
+		var counting = function(source){
+			source.keyup(function(){
+				var c = source.val().length;				
+				$("#count").text(c);
+				// $("content").append(newline(c));
+				return c;
+			});			
+		};
+		var newline = function(source_len){
+			if(source_len >= 20){
+				console.log('br');
+				return '<br>';
+			}
+			else
+				return '';
+		};
+
+		var s_article = $("input[name='article_name']")
+		 d_article = $("#article_name")
+		 s_writer = $("input[name='writer']")
+		 d_writer = $("#writer")
+		 s_content = $("textarea")
+		 d_content = $("#content")
+		 artname_len = counting(s_article);
+		 writer_len = counting(s_writer);
+		 content_len = counting(s_content);
+
+		typeReal(s_article,d_article);
+		typeReal(s_writer,d_writer);
+		typeReal(s_content,d_content);
+
+	});
+</script>
+</body>
+</html>

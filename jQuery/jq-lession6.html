@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="bacteria">Bacteria
+	
+</div>
+<script type="text/javascript" src="script/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	var count, bhv = 0;
+
+	$(document).ready(function(){
+		
+		$('.bacteria').click(function(){
+			var ele = $(this);
+			count += 1;
+			bhv = Math.floor(Math.random()*10);
+			console.log(bhv);
+
+			switch(bhv){
+				case 0:
+				case 6:
+				ele.animate({
+					left: '+=100px',
+					height : '+=30px',
+					fontSize: "30px"
+				},1000);
+				break;
+
+				case 1:
+				case 2:
+				case 7:
+				ele.animate({
+					left: '-=20px',
+					height : '-=10px',
+					fontSize: "18px"
+				},'slow');
+				break;
+
+				case 3:
+				case 4:
+				case 5:
+				ele.animate({
+					left: '+=50px',
+					width : '+=10px',
+					fontSize: "25px"
+				},'slow');
+				break;
+				default:
+					ele.animate({
+					top :'+=10px'
+				},'slow');
+			}			
+		});
+	});
+</script>
+</body>
+</html>

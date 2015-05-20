@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+</head>
+<body>
+<button id="showData_btn">Show Data</button>
+<p>
+	<b>click()</b><br>
+	The click() method attaches an event handler function to an HTML element.<br>
+	The function is executed when the user clicks on the HTML element.<br>
+	The following example says: When a click event fires on a p element; hide the current p element:<br>
+	<b>Double-click on text to hide</b>
+</p>
+
+<script type="text/javascript" src="script/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	$('p').hide();
+
+	$(document).ready(function(){		
+		$('#showData_btn').click(function(){
+			$('p').show(1000);
+		});
+
+		$('p').on({
+			dblclick : function(){
+				$(this).hide(1000);
+			},
+			mouseenter : function(){				
+				$(this).css("background-color","yellow");
+			},
+			mouseleave : function(){
+					$(this).css("background-color","#FFF");
+			}
+		});
+	});
+</script>
+</body>
+</html>

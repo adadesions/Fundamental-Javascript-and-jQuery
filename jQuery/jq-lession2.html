@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selector</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<p class="byClass">Ada Class</p>
+<p id="byId">Ada Id</p>
+<p>Ada Paragraph</p>
+
+
+<script type="text/javascript" src="script/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.byClass').click(function(){
+			alert('Selected By Class');
+		});
+
+		$('#byId').click(function(){
+			alert('Selected by Id');
+		});
+
+		$('p').click(function(){
+			alert('Selected by TagName');
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Effects</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>Ada Games</h1>
+<p>Click anywhere</p>
+<span>
+	The Ramones were an American punk rock band that formed in the New York City neighborhood of Forest Hills, Queens, in 1974. They are often cited as the first band to define the punk rock sound.[1][2] Despite achieving only limited commercial success, the band was a major influence on the 1970s punk movement in both the United States and United Kingdom.
+
+	All of the band members adopted pseudonyms ending with the surname "Ramone", although none of them were related. They performed 2,263 concerts, touring virtually nonstop for 22 years.[2] In 1996, after a tour with the Lollapalooza music festival, the band played a farewell concert and disbanded.[3] By 2014, all of the band's original four members—lead singer Joey Ramone (1951–2001), guitarist Johnny Ramone (1948–2004), bassist Dee Dee Ramone (1951–2002) and drummer Tommy Ramone (1949–2014)—had died.[4][5][6][7]
+
+	Recognition of the band's importance built over the years, and they are now mentioned in many assessments of all-time great rock music, such as the Rolling Stone list of the "100 Greatest Artists of All Time"[8] and VH1's "100 Greatest Artists of Hard Rock".[9] In 2002, the Ramones were ranked the second-greatest band of all time by Spin magazine, trailing only the Beatles.[10] On March 18, 2002, the original four members and Tommy's replacement on drums, Marky Ramone, were inducted into the Rock and Roll Hall of Fame.[2][11] In 2011, the group was awarded a Grammy Lifetime Achievement Award.[12][13]
+</span>
+
+<script type="text/javascript" src="script/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+	var body = $('body');
+	$('p, span').hide();
+
+
+	$(document).ready(function(){		
+		
+		$('h1').fadeOut('50').fadeIn('100',function(){
+			$('p').fadeIn('1000');
+		});
+		
+
+		$(document).click(function(){
+			body.append(function(){
+				var html = "<div class='rect'></div>";
+				return html;
+			});
+			$('span').slideToggle('1000');
+		});
+	});
+</script>
+</body>
+</html>
